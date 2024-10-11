@@ -1,4 +1,4 @@
-IMAGENET_CLASS_LIST = (
+IMAGENET_CLASSES = (
     "tench",
     "goldfish",
     "great white shark",

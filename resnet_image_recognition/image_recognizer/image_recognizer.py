@@ -3,7 +3,7 @@ from PIL import Image as im
 import torch
 from torchvision import transforms
 from ..resnet import ResNet50
-from .imagenet_class_list import IMAGENET_CLASS_LIST
+from .imagenet_classes import IMAGENET_CLASSES
 
 
 class ImageRecognizer:
@@ -54,6 +54,6 @@ class ImageRecognizer:
         class_index = torch.argmax(probs).item()
 
         # Get the class name
-        class_name = IMAGENET_CLASS_LIST[class_index]
+        class_name = IMAGENET_CLASSES[class_index]
 
         return class_name
